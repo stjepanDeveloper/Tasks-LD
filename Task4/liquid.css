@@ -123,7 +123,6 @@ div {
     .luxury-image,
     .luxury-content {
         width: 100%;
-        /* Ensures they stack */
     }
 
     .luxury-content__title {
