@@ -1,0 +1,504 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e6c8ed;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.yoga-showcase {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #c89ee7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.poses-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.poses-header h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.poses-header p {
+    font-size: 20px;
+    color: #666;
+    margin: 5px 0 15px 0;
+}
+
+.poses-header button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    background-color: rgb(252, 251, 252);
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 25px;
+}
+
+.poses-header button:hover {
+    background-color: #f0f0f0;
+}
+
+.pose-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pose-card {
+    width: 600px;
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 50px;
+    border: 1px dashed #c89ee7;
+    position: relative;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    flex: 0 1 auto;
+    
+}
+
+
+
+.yoga-image {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    
+}
+
+.yoga-icon {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.pose-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-top: 25px;
+    font-weight: 600;
+    color: #856e8a;
+}
+
+.graphic {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+
+/* Downward Dog Pose (Pose Card 1) */
+.pose1-graphic {
+    transform: none;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Tree Pose (Pose Card 2) */
+.pose2-graphic1 {
+    width: 70px;
+    height: 70px;
+    top: 5%;
+    right: 15%;
+    transform: translate(50%, -50%);
+}
+
+.pose2-graphic2 {
+    width: 70px;
+    height: 70px;
+    bottom: 10%;
+    left: 10%;
+    transform: translate(-50%, 50%);
+}
+
+
+/* Warrior II Pose (Pose Card 3) */
+.pose3-graphic {
+    width: 70px;
+    height: 70px;
+    bottom: 10%;
+    right: 20%;
+    transform: translate(50%, 50%);
+}
+
+.yoga-button {
+    width: 300px;
+
+}
+
+/* Media Queries */
+
+@media (min-width: 1440px) {
+        .pose-card {
+            width: 500px;
+        }
+    
+        .yoga-image {
+            max-width: 400px;
+        }
+    
+        .yoga-icon {
+            width: 100px;
+            height: auto;
+        }
+    
+        .pose-card p {
+            font-size: 16px;
+        }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .pose-card {
+        width: 350px;
+    }
+
+    .yoga-image {
+        max-width: 270px;
+    }
+
+    .graphic1,
+    .graphic2,
+    .graphic3,
+    .graphic4 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pose-card p {
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pose-card {
+        width: 320px;
+    }
+
+    .yoga-image {
+        max-width: 240px;
+    }
+
+    .graphic1,
+    .graphic2,
+    .graphic3,
+    .graphic4 {
+        width: 70px;
+        height: 70px;
+    }
+
+    .pose-card p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    
+    .pose-card {
+        width: 280px;
+    }
+
+    .yoga-image {
+        max-width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .yoga-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .pose-card p {
+        font-size: 13px;
+    }
+
+    .pose1-graphic,
+    .pose2-graphic1,
+    .pose2-graphic2,
+    .pose3-graphic {
+        width: 60px;
+        height: 60px;
+    }
+
+    .pose1-graphic {
+        top: 10%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pose2-graphic1 {
+        top: 5%;
+        right: 20%;
+        transform: translate(50%, -50%);
+    }
+
+    .pose2-graphic2 {
+        bottom: 10%;
+        left: 20%;
+        transform: translate(-50%, 50%);
+    }
+
+    .pose3-graphic {
+        bottom: 10%;
+        right: 20%;
+        transform: translate(50%, 50%);
+    }
+}
+
+@media (max-width: 767px) {
+
+    
+    .pose-card {
+        width: 80%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+   
+    .yoga-image {
+        max-width: 180px;
+        height: auto;
+        margin: 0 auto;
+        
+    }
+
+    
+    .yoga-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .pose1-graphic,
+    .pose2-graphic1,
+    .pose2-graphic2,
+    .pose3-graphic {
+        width: 60px;
+        height: 60px;
+        transform: translate(-50%, -50%);
+    }
+
+    .pose1-graphic {
+        top: 10%;
+        left: 15%;
+    }
+
+    .pose2-graphic1 {
+        top: 5%;
+        right: 20%;
+        transform: translate(50%, -50%);
+    }
+
+    .pose2-graphic2 {
+        bottom: 5%;
+        left: 20%;
+        transform: translate(-50%, 50%);
+    }
+
+    .pose3-graphic {
+        bottom: 5%;
+        right: 20%;
+        transform: translate(50%, 50%);
+    }
+
+    .pose-card p {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 376px) and (max-width: 480px) {
+    .pose-card {
+        width: 90%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .yoga-image {
+        max-width: 140px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .yoga-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pose1-graphic {
+        width: 50px;
+        height: 50px;
+        top: 15%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pose2-graphic1 {
+        width: 50px;
+        height: 50px;
+        top: 5%;
+        right: 25%;
+        transform: translate(50%, -50%);
+    }
+
+    .pose2-graphic2 {
+        width: 50px;
+        height: 50px;
+        bottom: 10%;
+        left: 25%;
+        transform: translate(-50%, 50%);
+    }
+
+    .pose3-graphic {
+        width: 50px;
+        height: 50px;
+        bottom: 10%;
+        right: 20%;
+        transform: translate(50%, 50%);
+    }
+
+    .pose-card p {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+
+
+@media (max-width: 375px) {
+
+    
+    .poses-header h2 {
+        font-size: 24px;
+        
+    }
+
+    .poses-header p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .poses-header button {
+        padding: 8px 16px;
+        font-size: 12px;
+        width: auto;
+    }
+
+    
+    .pose-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+    .pose-card {
+        width: 100%;
+        padding: 15px 10px;
+        border: 1px dashed #c89ee7;
+        box-sizing: border-box;
+    }
+
+    
+    .icon-wrapper {
+        margin-bottom: 40px;
+        
+    }
+
+    .yoga-image {
+        max-width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    
+    .yoga-icon {
+        width: 50px;
+        /* Increased size */
+        height: 50px;
+    }
+
+    
+    .pose1-graphic {
+        width: 80px;
+        /* Increase the size of the icon */
+        height: 80px;
+        top: 5px;
+        /* Adjust positioning */
+        left: 20%;
+        transform: translate(-50%, 0);
+        /* Adjust transform */
+    }
+
+    .pose2-graphic1 {
+        width: 80px;
+        height: 80px;
+        top: 5px;
+        right: 20%;
+        transform: translate(50%, 0);
+    }
+
+    .pose2-graphic2 {
+        width: 80px;
+        height: 80px;
+        bottom: -50px;
+        left: 25%;
+        transform: translate(-50%, 0);
+    }
+
+    .pose3-graphic {
+        width: 80px;
+        height: 80px;
+        bottom: -50px;
+        right: 25%;
+        transform: translate(50%, 0);
+    }
+
+    
+    .pose-card p {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+

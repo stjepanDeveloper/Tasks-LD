@@ -1,0 +1,172 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #F3F3C2 0%, #EADCDB 38%, #F0EFC8 78%, #E4D2F3 100%);
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+
+div {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 2px solid transparent;
+}
+
+.luxury-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.luxury-image__img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-right: 3px dashed goldenrod;
+}
+
+
+.luxury-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.luxury-content__title {
+    color: black;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.luxury-content__description {
+    text-align: center;
+    color: #474444;
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.luxury-content__button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#svgButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#svgButton img {
+    width: 100px;
+    height: auto;
+}
+
+#svgButton:hover img {
+    filter: brightness(1.1);
+}
+
+
+@media (max-width: 1440px) {
+    .luxury-content__title {
+        font-size: 22px;
+    }
+
+    .luxury-content__description {
+        font-size: 14px;
+    }
+
+    #svgButton {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    div {
+        flex-direction: column;
+    }
+
+    .luxury-image,
+    .luxury-content {
+        width: 100%;
+        /* Ensures they stack */
+    }
+
+    .luxury-content__title {
+        font-size: 20px;
+    }
+
+    .luxury-content__description {
+        font-size: 14px;
+    }
+
+    #svgButton {
+        max-width: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-content__title {
+        font-size: 18px;
+    }
+
+    .luxury-content__description {
+        font-size: 12px;
+    }
+
+    #svgButton {
+        max-width: 60px;
+    }
+}
+
+@media (max-width: 375px) {
+    .luxury-content__title {
+        font-size: 16px;
+    }
+
+    .luxury-content__description {
+        font-size: 12px;
+    }
+
+    .luxury-image__img {
+        object-fit: contain;
+    }
+
+    #svgButton {
+        max-width: 50px;
+    }
+}

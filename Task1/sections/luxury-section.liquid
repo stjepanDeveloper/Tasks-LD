@@ -1,0 +1,81 @@
+<!-- Link za CSS file -->
+<link rel="stylesheet" href="{{ 'styling.css' | asset_url }}">
+
+<!-- Link za JavaScript file -->
+<script src="{{ 'script.js' | asset_url }}" defer></script>
+
+<luxury-section>
+  <div class="luxury-image">
+    <img
+      src="{{ section.settings.section_image | image_url }}"
+      alt="Luxury Product"
+      class="luxury-image__img"
+      width="600"
+      height="400"
+    >
+  </div>
+
+  <div class="luxury-content">
+    <!-- Title Section -->
+    <div class="luxury-content__title">{{ section.settings.section_title }}</div>
+
+    <!-- Description Section -->
+    <div class="luxury-content__description">
+      {{ section.settings.section_description }}
+      <span id="moreText" class="luxury-content__more-text">
+        Follow us on social media for a chance to win exclusive giveaways and huge discounts on our luxury collection!
+        Stay updated with the latest trends, flash sales, and prize games where you can win designer bags, jewelry, and
+        more. Join our community and elevate your style today!
+      </span>
+    </div>
+
+    <!-- Button Section -->
+    <div class="luxury-content__button-wrapper">
+      <a href="{{ section.settings.button_link }}" class="luxury-content__button" id="svgButton">
+        <img
+          src="{{ 'button.svg' | asset_url }}"
+          alt="Custom Button"
+          class="luxury-content__button-img"
+          width="50"
+          height="30"
+        >
+      </a>
+    </div>
+  </div>
+</luxury-section>
+
+{% schema %}
+{
+  "name": "Luxury Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "SHOP LUXURY WITH US"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description",
+      "default": "We bring you a curated collection..."
+    },
+    {
+      "type": "image_picker",
+      "id": "section_image",
+      "label": "Section Image"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Luxury Section"
+    }
+  ]
+}
+{% endschema %}
